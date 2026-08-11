@@ -1,11 +1,11 @@
 import React from 'react';
-import { 
-  BookOpen, 
-  GitBranch, 
-  Library, 
-  Music, 
-  Award, 
-  FileText, 
+import {
+  BookOpen,
+  GitBranch,
+  Library,
+  Music,
+  Award,
+  FileText,
   Image as ImageIcon,
   ArrowRight,
   ShieldAlert
@@ -18,7 +18,7 @@ interface HomeProps {
   logoUrl?: string;
 }
 
-export const Home: React.FC<HomeProps> = ({ 
+export const Home: React.FC<HomeProps> = ({
   onSelectTab,
   logoUrl = '/logo-oko-idile-oya.svg'
 }) => {
@@ -73,10 +73,10 @@ export const Home: React.FC<HomeProps> = ({
       <section className="home-hero">
         <div className="container">
           <div className="home-logo-container">
-            <img 
-              src={logoUrl} 
-              alt="Logo Oko Ìdílé Ọya — Matriz de Omoloko de Raiz Nagô" 
-              className="home-logo-img" 
+            <img
+              src={logoUrl}
+              alt="Logo Oko Ìdílé Ọya — Omoloko de Raiz Nagô"
+              className="home-logo-img"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
                 if (target.src !== '/logo.png') {
@@ -89,7 +89,7 @@ export const Home: React.FC<HomeProps> = ({
           </div>
 
           <h1 className="home-hero-title">Oko Ìdílé Ọya</h1>
-          <h2 className="home-hero-subtitle">Matriz de Omoloko de Raiz Nagô</h2>
+          <h2 className="home-hero-subtitle">Omoloko de Raiz Nagô</h2>
 
           <p className="home-hero-quote">
             "Um espaço dedicado à memória, ao conhecimento, à tradição e aos ensinamentos do Oko Ìdílé Ọya."
@@ -117,8 +117,8 @@ export const Home: React.FC<HomeProps> = ({
 
           <div className="home-cards-grid">
             {cards.map((card) => (
-              <div 
-                key={card.id} 
+              <div
+                key={card.id}
                 className="home-card"
                 onClick={() => onSelectTab(card.id)}
               >

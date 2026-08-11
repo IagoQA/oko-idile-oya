@@ -28,7 +28,7 @@ export const Footer: React.FC<FooterProps> = ({
               />
               <div>
                 <h3 className="footer-title">Oko Ìdílé Ọya</h3>
-                <p className="footer-subtitle">Matriz de Omoloko de Raiz Nagô</p>
+                <p className="footer-subtitle">Omoloko de Raiz Nagô</p>
               </div>
             </div>
             <p className="footer-tagline">
@@ -66,7 +66,7 @@ export const Footer: React.FC<FooterProps> = ({
 
         {/* Bottom copyright line */}
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} Oko Ìdílé Ọya — Matriz de Omoloko de Raiz Nagô. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} Oko Ìdílé Ọya — Omoloko de Raiz Nagô. Todos os direitos reservados.</p>
           <p>Tradição, Ancestralidade & Respeito</p>
         </div>
       </div>

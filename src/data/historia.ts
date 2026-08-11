@@ -36,10 +36,10 @@ export const historiaData: HistoriaData = {
   },
   seccaoMinhaCasa: {
     title: "A História do Oko Ìdílé Ọya",
-    sub: "Matriz de Omoloko de Raiz Nagô",
+    sub: "Omoloko de Raiz Nagô",
     paragraphs: [
       "[A história do Oko Ìdílé Ọya será inserida aqui pelo responsável da casa.]",
-      "[Este espaço receberá o histórico de fundação da nossa casa, a consagração dos assentamentos, os ritos e a consolidação da Matriz de Omoloko de Raiz Nagô.]"
+      "[Este espaço receberá o histórico de fundação da nossa casa, a consagração dos assentamentos, os ritos e a consolidação da Omoloko de Raiz Nagô.]"
     ],
     highlight: "Um espaço dedicado à memória, ao conhecimento, à tradição e aos ensinamentos do Oko Ìdílé Ọya."
   },
@@ -52,7 +52,7 @@ export const historiaData: HistoriaData = {
     {
       year: "[Ano]",
       title: "Fundação do Oko Ìdílé Ọya",
-      description: "[Descrição da fundação e assentamento da Matriz de Omoloko de Raiz Nagô.]"
+      description: "[Descrição da fundação e assentamento da Omoloko de Raiz Nagô.]"
     },
     {
       year: "[Ano]",

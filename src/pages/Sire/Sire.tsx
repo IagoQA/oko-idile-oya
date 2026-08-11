@@ -25,7 +25,7 @@ export const SirePage: React.FC = () => {
           <span className="section-tag">Arquivo Digital de Cantigas</span>
           <h1 className="section-title">Ṣiré Oko Ìdílé Ọya</h1>
           <p className="section-subtitle">
-            Cânticos (Orin) e saudações aos Òrìṣà preservados na tradição da nossa casa de santo — Matriz de Omoloko de Raiz Nagô.
+            Cânticos (Orin) e saudações aos Òrìṣà preservados na tradição da nossa casa de santo — Omoloko de Raiz Nagô.
           </p>
         </div>
 

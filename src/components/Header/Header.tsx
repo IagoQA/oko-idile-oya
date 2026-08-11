@@ -65,8 +65,8 @@ export const Header: React.FC<HeaderProps> = ({
               className="header-logo-img"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
-                if (target.src !== '/logo.png') {
-                  target.src = '/logo.png';
+                if (target.src !== '/logo-oko-idile-oya.svg') {
+                  target.src = '/logo-oko-idile-oya.svg';
                 } else {
                   target.src = '/logo-oko-idile-oya.svg';
                 }
@@ -75,7 +75,7 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
           <div className="header-titles">
             <span className="header-title-main">Oko Ìdílé Ọya</span>
-            <span className="header-subtitle-main">Matriz de Omoloko de Raiz Nagô</span>
+            <span className="header-subtitle-main">Omoloko de Raiz Nagô</span>
           </div>
         </button>
 
@@ -143,7 +143,7 @@ export const Header: React.FC<HeaderProps> = ({
 
           <div className="drawer-footer">
             <p style={{ fontWeight: 'bold' }}>Oko Ìdílé Ọya</p>
-            <p style={{ fontSize: '0.75rem', marginTop: '0.2rem' }}>Matriz de Omoloko de Raiz Nagô</p>
+            <p style={{ fontSize: '0.75rem', marginTop: '0.2rem' }}>Omoloko de Raiz Nagô</p>
           </div>
         </div>
       </div>

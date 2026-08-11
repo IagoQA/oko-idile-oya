@@ -31,17 +31,17 @@ export const linhagemData: LinhagemData = {
   },
   ileFilho: {
     nome: "Oko Ìdílé Ọya",
-    subtitulo: "Matriz de Omoloko de Raiz Nagô",
+    subtitulo: "Omoloko de Raiz Nagô",
     papel: "Minha Casa (Matriz consagrada)",
-    tradicao: "Matriz de Omoloko de Raiz Nagô",
+    tradicao: "Omoloko de Raiz Nagô",
     descricao: [
       "[A história da fundação do Oko Ìdílé Ọya e sua consolidação como Matriz Nagô será inserida aqui.]",
       "[Registro da trajetória espiritual, da elevação dos pilares e do respeito à regência de Mãe Ọya.]"
     ],
-    detalhes: "Matriz de Omoloko de Raiz Nagô, preservando o cultivo tradicional dos Òrìṣà, dos fundamentos e do aprendizado."
+    detalhes: "Omoloko de Raiz Nagô, preservando o cultivo tradicional dos Òrìṣà, dos fundamentos e do aprendizado."
   },
   textoLinhagem: [
     "A relação entre o Ilé Àṣẹ Ìmọ́lẹ̀ Òṣàlá e o Oko Ìdílé Ọya expressa a nossa linhagem e o caminho sagrado de onde viemos.",
-    "Com profundo respeito e reverência à casa do pai (Omoloko de Raiz Makumba), o Oko Ìdílé Ọya ergue-se como Matriz de Omoloko de Raiz Nagô, mantendo viva a memória, a disciplina e a transmissão do Àṣẹ para os seus filhos."
+    "Com profundo respeito e reverência à casa do pai (Omoloko de Raiz Makumba), o Oko Ìdílé Ọya ergue-se como Omoloko de Raiz Nagô, mantendo viva a memória, a disciplina e a transmissão do Àṣẹ para os seus filhos."
   ]
 };
