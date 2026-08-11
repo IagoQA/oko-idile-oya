@@ -1,0 +1,153 @@
+.linhagem-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.linhagem-card-matriz {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-inverse);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  width: 100%;
+  max-width: 680px;
+  box-shadow: var(--shadow-md);
+  border: 2px solid var(--color-accent-gold);
+  text-align: center;
+  position: relative;
+}
+
+.linhagem-card-matriz::after {
+  content: 'Matriz / Ilé Pai';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-accent-gold);
+  color: var(--color-bg-dark);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.2rem 0.85rem;
+  border-radius: var(--radius-full);
+}
+
+.linhagem-matriz-title {
+  font-family: var(--font-heading);
+  font-size: 1.85rem;
+  color: var(--color-accent-gold-light);
+  margin-bottom: 0.35rem;
+}
+
+.linhagem-matriz-sub {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.linhagem-arrow-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--color-primary);
+}
+
+.linhagem-connector-line {
+  width: 3px;
+  height: 36px;
+  background: linear-gradient(180deg, var(--color-accent-gold) 0%, var(--color-primary) 100%);
+}
+
+.linhagem-connector-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background-color: var(--color-primary-subtle);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border-red);
+}
+
+.linhagem-card-filho {
+  background-color: var(--color-bg-card);
+  color: var(--color-text-main);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  width: 100%;
+  max-width: 680px;
+  box-shadow: var(--shadow-red);
+  border: 2px solid var(--color-primary);
+  text-align: center;
+  position: relative;
+}
+
+.linhagem-card-filho::after {
+  content: 'Casa Consagrada';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-primary);
+  color: white;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.2rem 0.85rem;
+  border-radius: var(--radius-full);
+}
+
+.linhagem-filho-title {
+  font-family: var(--font-heading);
+  font-size: 1.85rem;
+  color: var(--color-primary);
+  margin-bottom: 0.35rem;
+}
+
+.linhagem-filho-sub {
+  font-size: 0.9rem;
+  color: var(--color-accent-wine);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.linhagem-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.linhagem-info-box {
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.linhagem-info-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .linhagem-details-grid {
+    grid-template-columns: 1fr;
+  }
+}

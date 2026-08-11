@@ -1,0 +1,83 @@
+.cargos-category-section {
+  margin-bottom: 3.5rem;
+}
+
+.cargos-category-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--color-primary-subtle);
+  margin-bottom: 1.75rem;
+}
+
+.cargos-category-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+.cargos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.75rem;
+}
+
+.cargo-card {
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  padding: 1.75rem;
+  transition: all var(--transition-normal);
+}
+
+.cargo-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-border-hover);
+}
+
+.cargo-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: var(--color-text-main);
+  margin-bottom: 0.75rem;
+}
+
+.cargo-card-desc {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.cargo-responsabilidades-title {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.cargo-resp-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.cargo-resp-item {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.cargo-resp-item::before {
+  content: '•';
+  color: var(--color-primary);
+  font-weight: bold;
+}

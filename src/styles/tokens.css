@@ -1,0 +1,52 @@
+:root {
+  /* Brand Colors - Red identity (Ọya), Off-white, Dark Slate */
+  --color-primary: #9E1B1B;
+  --color-primary-dark: #7A0C0C;
+  --color-primary-light: #C22A2A;
+  --color-primary-subtle: #FAF0F0;
+  
+  --color-accent-wine: #5A0E14;
+  --color-accent-gold: #C5A059;
+  --color-accent-gold-light: #E8D39E;
+
+  /* Neutral Backgrounds */
+  --color-bg-main: #FDFBF7;
+  --color-bg-card: #FFFFFF;
+  --color-bg-subtle: #F6F3EC;
+  --color-bg-dark: #161413;
+  --color-bg-dark-card: #221F1E;
+
+  /* Text Colors */
+  --color-text-main: #242120;
+  --color-text-muted: #66605C;
+  --color-text-light: #948C85;
+  --color-text-inverse: #FDFBF7;
+  --color-text-red: #8A0E0E;
+
+  /* Borders & Dividers */
+  --color-border: #E8E2D8;
+  --color-border-hover: #C5BBAA;
+  --color-border-red: rgba(158, 27, 27, 0.25);
+
+  /* Typography */
+  --font-heading: 'Cinzel', 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-reading: 'Lora', Georgia, serif;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(36, 33, 32, 0.04);
+  --shadow-md: 0 4px 20px rgba(36, 33, 32, 0.07);
+  --shadow-lg: 0 10px 30px rgba(36, 33, 32, 0.1);
+  --shadow-red: 0 6px 24px rgba(158, 27, 27, 0.12);
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.4s ease;
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" rx="100" fill="#800A0A" />
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#D4AF37" stroke-width="3" stroke-dasharray="6 4"/>
+  <circle cx="100" cy="100" r="82" fill="none" stroke="#FDFBF7" stroke-width="1.5"/>
+  <!-- Decorative Crown / Orisha Symbol Motif -->
+  <path d="M100 45 L125 90 L155 60 L140 125 L60 125 L45 60 L75 90 Z" fill="none" stroke="#FDFBF7" stroke-width="3.5" stroke-linejoin="round"/>
+  <circle cx="100" cy="45" r="4" fill="#D4AF37" />
+  <circle cx="45" cy="60" r="4" fill="#D4AF37" />
+  <circle cx="155" cy="60" r="4" fill="#D4AF37" />
+  <!-- Text -->
+  <text x="100" y="152" font-family="'Cinzel', serif" font-size="14" font-weight="700" fill="#FDFBF7" text-anchor="middle" letter-spacing="1">OKO ÌDÍLÉ ỌYA</text>
+  <text x="100" y="168" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="500" fill="#D4AF37" text-anchor="middle" letter-spacing="1.5">OMOLOKO NAGÔ</text>
+</svg>
