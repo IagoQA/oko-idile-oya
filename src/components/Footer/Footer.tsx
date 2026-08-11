@@ -23,7 +23,7 @@ export const Footer: React.FC<FooterProps> = ({
                 alt="Logo Oko Ìdílé Ọya" 
                 className="footer-logo-img" 
                 onError={(e) => {
-                  (e.target as HTMLImageElement).src = '/logo-placeholder.svg';
+                  (e.target as HTMLImageElement).src = '/logo-oko-idile-oya.svg';
                 }}
               />
               <div>

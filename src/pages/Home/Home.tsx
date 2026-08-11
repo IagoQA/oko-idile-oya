@@ -20,7 +20,7 @@ interface HomeProps {
 
 export const Home: React.FC<HomeProps> = ({ 
   onSelectTab,
-  logoUrl = 'file:///C:/Users/calde/.gemini/antigravity-ide/brain/98d9e9f4-c566-4d47-b947-64500e6315e3/media__1786408058133.png'
+  logoUrl = '/logo-oko-idile-oya.svg'
 }) => {
   const cards = [
     {
@@ -82,7 +82,7 @@ export const Home: React.FC<HomeProps> = ({
                 if (target.src !== '/logo.png') {
                   target.src = '/logo.png';
                 } else {
-                  target.src = '/logo-placeholder.svg';
+                  target.src = '/logo-oko-idile-oya.svg';
                 }
               }}
             />

@@ -68,7 +68,7 @@ export const Header: React.FC<HeaderProps> = ({
                 if (target.src !== '/logo.png') {
                   target.src = '/logo.png';
                 } else {
-                  target.src = '/logo-placeholder.svg';
+                  target.src = '/logo-oko-idile-oya.svg';
                 }
               }}
             />
@@ -113,7 +113,7 @@ export const Header: React.FC<HeaderProps> = ({
                   src={logoUrl} 
                   alt="Logo" 
                   style={{ width: 36, height: 36, objectFit: 'contain' }}
-                  onError={(e) => { (e.target as HTMLImageElement).src = '/logo-placeholder.svg'; }}
+                  onError={(e) => { (e.target as HTMLImageElement).src = '/logo-oko-idile-oya.svg'; }}
                 />
                 <span className="drawer-brand-title">Oko Ìdílé Ọya</span>
               </div>

@@ -710,49 +710,49 @@ export const cantigasData: Cantiga[] = [
   {
     id: "osala-1",
     nome: "Àwúre àwúre — Bùkún súre Àjálá",
-    orisha: "ÒṢÀLÁ",
+    orisha: "Òṣàlá",
     letra: "Àwúre àwúre\nBùkún súre Àjálá\nÒjíṣẹ́ tayọ̀\nOlórí nṣe\nẸ̀rọ̀, ẹ̀rọ̀",
     traducao: "Bênçãos, bênçãos\nQue Àjálá acrescente e conceda bênçãos\nMensageiro da felicidade\nCertamente o dono\nDa calma, da calma"
   },
   {
     id: "osala-2",
     nome: "Àwúre bàbá",
-    orisha: "ÒṢÀLÁ",
+    orisha: "Òṣàlá",
     letra: "Àwúre\nÀwúre bàbá\nÀwúre",
     traducao: "A benção\nA benção, pai\nA benção"
   },
   {
     id: "osala-3",
     nome: "Òrìṣà bàbá",
-    orisha: "ÒṢÀLÁ",
+    orisha: "Òṣàlá",
     letra: "Òrìṣà bàbá\nÒrìṣà gbé mi oo\nÒrìṣà bàbá Olúwa mi\nÒrìṣà gbé mi oo",
     traducao: "Òrìṣà pai\nÒrìṣà que me dá sustentação!\nÒrìṣà pai é meu senhor\nÒrìṣà que me dá sustentação!"
   },
   {
     id: "osala-4",
     nome: "Olúwa mi kì í kégbe oo",
-    orisha: "ÒṢÀLÁ",
+    orisha: "Òṣàlá",
     letra: "Olúwa mi kì í kégbe oo\nÒrìṣà Ògìyán òkè wa oo\nEléjìgbò Ajagùnnà\nỌlọ́run a bẹ̀ bẹ̀ pé wúre",
     traducao: "Meu senhor não grita em vão\nÒrìṣà Ògìyán está acima de nós\nAjagùnnà é o rei de Èjìgbò\nỌlọ́run, nós suplicamos por bênçãos"
   },
   {
     id: "osala-5",
     nome: "Oní sáà wúre",
-    orisha: "ÒṢÀLÁ",
+    orisha: "Òṣàlá",
     letra: "Oní sáà wúre\nA wúre àṣẹ\nOní sáà wúre\nO bẹ́ rí o mọ̀\nOní sáà wúre\nA wúre àṣẹ bàbá\nOní sáà wúre\nO bẹ́ rí o mọ̀\nOní sáà wúre",
     traducao: "O Senhor do tempo e da bênção\nNós pedimos bênção e àṣẹ\nO Senhor do tempo e da bênção\nDeste modo ele vê, ele sabe\nO Senhor do tempo e da bênção\nNós pedimos bênção e àṣẹ, pai\nO Senhor do tempo e da bênção\nDeste modo ele vê, ele sabe\nO Senhor do tempo e da bênção"
   },
   {
     id: "osala-6",
     nome: "Ajagùnnà bá wa oo",
-    orisha: "ÒṢÀLÁ",
+    orisha: "Òṣàlá",
     letra: "Ajagùnnà bá wa oo\nAjagùnnà\nElémaṣọ bàbá olórogun\nAjagùnnà bá wa oo",
     traducao: "Ajagùnnà, venha a nosso encontro!\nAjagùnnà\nDono das roupas brancas, senhor da guerra e da batalha\nAjagùnnà, venha a nosso encontro"
   },
   {
     id: "osala-7",
     nome: "Òfuurufú lóore re nlààlà",
-    orisha: "ÒṢÀLÁ",
+    orisha: "Òṣàlá",
     letra: "Òfuurufú lóore re nlààlà\nBàbá kẹ́hìndé Eléjìgbò\nIlé Ifọ́n mo júbà, bàbá\nÈjìgbò rere, mo júbà òo\nOlúwa\nẸ ma rọ̀\nẸ ma rọ̀\nA wẹ́ ṣe",
     traducao: "Ar de bondade, sorte e cuidado\nPai, que retornou como rei de Èjìgbò\nMeus respeitos à casa de Ifọ́n, pai\nÈjìgbò está abençoada, meus respeitos\nNosso senhor\nÉs, sem dúvida, a calma\nÉs, sem dúvida, a calma\nEstamos definitivamente satisfeitos"
   }
