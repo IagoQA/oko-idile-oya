@@ -68,37 +68,7 @@ export const CargosPage: React.FC = () => {
         {(activeCategory === 'Todos' ||
           activeCategory === 'ekeji' ||
           activeCategory === 'aare' ||
-          activeCategory === 'alaajo') && (
-          <div
-            className="cargos-ekeji-callout"
-            role="region"
-            aria-label="Explicação sobre a posição das Ekéjì"
-          >
-            <div className="cargos-ekeji-callout-header">
-              <div className="cargos-ekeji-callout-icon-box">
-                <Award size={22} />
-              </div>
-              <h2 className="cargos-ekeji-callout-title">
-                A Posição das Ẹkéjì no Oko Ìdílé Ọya
-              </h2>
-            </div>
-            <p className="cargos-ekeji-callout-text">
-              As <strong>Ẹkéjì</strong> exercem posições de alta dignidade, confiança e
-              apoio ritual especializado na nossa casa. Em vez de constituírem um corpo
-              isolado da rotina religiosa, suas atribuições distribuem-se de forma
-              integrada entre as funções de <strong>Ààrẹ</strong> (auxiliares de
-              sacerdócios) e <strong>Aláájò</strong> (operações rituais e condução do
-              Ìpàdé em função ligada a Ọya).
-            </p>
-            <p className="cargos-ekeji-callout-text" style={{ marginTop: '0.65rem' }}>
-              Na tradição do Oko Ìdílé Ọya, a dignidade de Ẹkéjì restringe-se aos cargos
-              expressamente consagrados para essa condição no cadastro da casa —{' '}
-              <strong>Ajímúdà</strong>, <strong>Dàgàn</strong> e <strong>Ìyádàgàn</strong>{' '}
-              —, não se presumindo essa titularidade a todas as mulheres que exercem
-              atividades auxiliares na comunidade.
-            </p>
-          </div>
-        )}
+          activeCategory === 'alaajo')}
 
         {/* Listagem das Seções */}
         {visibleSections.map((secao) => {
