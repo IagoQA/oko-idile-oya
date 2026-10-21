@@ -44,7 +44,7 @@ export const Home: React.FC<HomeProps> = ({
     {
       id: 'cargos' as TabType,
       title: 'Cargos da Casa',
-      desc: 'Estrutura de Cargos, Ekéjì, Ogans e Posições Espirituais da nossa comunidade.',
+      desc: 'Estrutura de Cargos, Ẹkéjì, Ogans e Posições Espirituais da nossa comunidade.',
       icon: <Award size={24} />
     },
     {

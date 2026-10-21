@@ -1,122 +1,205 @@
 import React, { useState } from 'react';
-import { cargosData, CargoItem } from '../../data/cargos';
-import { Award, Shield, Users, Heart, Sparkles } from 'lucide-react';
+import {
+  secoesCargos,
+  getCargosPorSecao,
+  getCargoDescricaoParaSecao,
+  CargoGroupId,
+  CargoItem
+} from '../../data/cargos';
+import { Flame, Shield, Compass, Music, Award, Sparkles } from 'lucide-react';
 import './Cargos.css';
 
 export const CargosPage: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>('Todos');
 
-  const categories: CargoItem['categoria'][] = [
-    'Cargos',
-    'EKÉJÌ',
-    'OGANS',
-    'POSIÇÕES ESPIRITUAIS'
-  ];
-
-  const categoryIcons: Record<CargoItem['categoria'], React.ReactNode> = {
-    'Cargos': <Award size={22} color="var(--color-primary)" />,
-    'EKÉJÌ': <Shield size={22} color="var(--color-accent-gold)" />,
-    'OGANS': <Users size={22} color="var(--color-primary)" />,
-    'POSIÇÕES ESPIRITUAIS': <Sparkles size={22} color="var(--color-accent-wine)" />
+  const sectionIcons: Record<CargoGroupId, React.ReactNode> = {
+    bale: <Flame size={22} />,
+    aare: <Shield size={22} />,
+    alaajo: <Compass size={22} />,
+    ogans: <Music size={22} />,
+    ekeji: <Award size={22} />,
+    'posicoes-espirituais': <Sparkles size={22} />
   };
+
+  const visibleSections =
+    activeCategory === 'Todos'
+      ? secoesCargos
+      : secoesCargos.filter((s) => s.id === activeCategory);
 
   return (
     <div className="section-padding">
       <div className="container">
+        {/* Header Principal */}
         <div className="section-header">
-          <span className="section-tag">Hierarquia & Organização</span>
+          <span className="section-tag">Hierarquia & Funções</span>
           <h1 className="section-title">Cargos do Oko Ìdílé Ọya</h1>
           <p className="section-subtitle">
-            Estrutura hierárquica, atribuições dos cargos sagrados, Ekéjì, Ogans e posições espirituais da nossa casa.
+            Estrutura canônica dos cargos e posições da nossa tradição organizada nas
+            classes funcionais: Bálẹ̀ (sacerdócios dos cultos), Ààrẹ (auxiliares dos
+            sacerdócios), Aláájò (funções operacionais), Ogans (funções rituais
+            especializadas), Ẹkéjì (apoio ritual) e Posições Espirituais.
           </p>
         </div>
 
-        {/* Category Filter Tabs */}
-        <div className="filter-bar">
+        {/* Barra de Filtros */}
+        <div className="filter-bar" role="tablist" aria-label="Filtro de grupos de cargos">
           <button
             onClick={() => setActiveCategory('Todos')}
             className={`filter-btn ${activeCategory === 'Todos' ? 'active' : ''}`}
+            role="tab"
+            aria-selected={activeCategory === 'Todos'}
           >
             Todos
           </button>
-          {categories.map((cat) => (
+          {secoesCargos.map((secao) => (
             <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`filter-btn ${activeCategory === cat ? 'active' : ''}`}
+              key={secao.id}
+              onClick={() => setActiveCategory(secao.id)}
+              className={`filter-btn ${activeCategory === secao.id ? 'active' : ''}`}
+              role="tab"
+              aria-selected={activeCategory === secao.id}
             >
-              {cat}
+              {secao.titulo}
             </button>
           ))}
         </div>
 
-        {categories.map((cat) => {
-          if (activeCategory !== 'Todos' && activeCategory !== cat) return null;
-          const items = cargosData.filter(c => c.categoria === cat);
-          if (items.length === 0) return null;
+        {/* Painel Explicativo sobre a Posição das Ekéjì */}
+        {(activeCategory === 'Todos' ||
+          activeCategory === 'ekeji' ||
+          activeCategory === 'aare' ||
+          activeCategory === 'alaajo') && (
+          <div
+            className="cargos-ekeji-callout"
+            role="region"
+            aria-label="Explicação sobre a posição das Ekéjì"
+          >
+            <div className="cargos-ekeji-callout-header">
+              <div className="cargos-ekeji-callout-icon-box">
+                <Award size={22} />
+              </div>
+              <h2 className="cargos-ekeji-callout-title">
+                A Posição das Ẹkéjì no Oko Ìdílé Ọya
+              </h2>
+            </div>
+            <p className="cargos-ekeji-callout-text">
+              As <strong>Ẹkéjì</strong> exercem posições de alta dignidade, confiança e
+              apoio ritual especializado na nossa casa. Em vez de constituírem um corpo
+              isolado da rotina religiosa, suas atribuições distribuem-se de forma
+              integrada entre as funções de <strong>Ààrẹ</strong> (auxiliares de
+              sacerdócios) e <strong>Aláájò</strong> (operações rituais e condução do
+              Ìpàdé em função ligada a Ọya).
+            </p>
+            <p className="cargos-ekeji-callout-text" style={{ marginTop: '0.65rem' }}>
+              Na tradição do Oko Ìdílé Ọya, a dignidade de Ẹkéjì restringe-se aos cargos
+              expressamente consagrados para essa condição no cadastro da casa —{' '}
+              <strong>Ajímúdà</strong>, <strong>Dàgàn</strong> e <strong>Ìyádàgàn</strong>{' '}
+              —, não se presumindo essa titularidade a todas as mulheres que exercem
+              atividades auxiliares na comunidade.
+            </p>
+          </div>
+        )}
 
-          const isEspiritual = cat === 'POSIÇÕES ESPIRITUAIS';
+        {/* Listagem das Seções */}
+        {visibleSections.map((secao) => {
+          const cargos = getCargosPorSecao(secao.id);
+          if (cargos.length === 0) return null;
+
+          const isEspiritual = secao.id === 'posicoes-espirituais';
 
           return (
-            <div key={cat} className="cargos-category-section" style={{ marginTop: '2.5rem' }}>
-              <div className="cargos-category-header">
-                {categoryIcons[cat]}
-                <h2 className="cargos-category-title" style={{ color: isEspiritual ? 'var(--color-accent-wine)' : 'var(--color-primary)' }}>
-                  {cat}
-                </h2>
-              </div>
-
-              {isEspiritual && (
-                <p style={{ fontStyle: 'italic', color: 'var(--color-text-muted)', marginBottom: '1.5rem', marginTop: '-0.75rem', fontSize: '0.95rem' }}>
-                  As posições espirituais representam a vivência, o recolhimento e os graus de aprendizado na comunidade de santo, diferenciando-se de cargos administrativos rituais.
-                </p>
-              )}
-
-              <div className="cargos-grid">
-                {items.map((cargo) => (
-                  <div 
-                    key={cargo.id} 
-                    className="cargo-card"
-                    style={{
-                      borderColor: isEspiritual ? 'var(--color-accent-gold)' : undefined,
-                      backgroundColor: isEspiritual ? '#FAF6F0' : undefined
-                    }}
+            <section
+              key={secao.id}
+              id={`secao-${secao.id}`}
+              className="cargos-category-section"
+              aria-labelledby={`titulo-${secao.id}`}
+            >
+              {/* Cabeçalho da Seção */}
+              <div className="cargos-category-header-wrap">
+                <div className="cargos-category-header">
+                  <div
+                    className={`cargos-category-icon-box ${
+                      isEspiritual ? 'espiritual' : ''
+                    }`}
                   >
-                    <span 
-                      className={`badge ${isEspiritual ? '' : 'badge-red'}`} 
-                      style={{ 
-                        marginBottom: '0.85rem',
-                        backgroundColor: isEspiritual ? 'var(--color-accent-gold-light)' : undefined,
-                        color: isEspiritual ? 'var(--color-bg-dark)' : undefined
-                      }}
-                    >
-                      {cargo.categoria}
-                    </span>
-
-                    <h3 className="cargo-card-title">{cargo.nome}</h3>
-                    
-                    {cargo.descricao && (
-                      <p style={{ fontSize: '0.92rem', color: 'var(--color-text-muted)', lineHeight: '1.6', marginTop: '0.5rem' }}>
-                        {cargo.descricao}
-                      </p>
-                    )}
-
-                    {cargo.responsabilidades && cargo.responsabilidades.length > 0 && (
-                      <div style={{ marginTop: '1rem' }}>
-                        <h4 className="cargo-responsabilidades-title">Atribuições</h4>
-                        <ul className="cargo-resp-list">
-                          {cargo.responsabilidades.map((resp, idx) => (
-                            <li key={idx} className="cargo-resp-item">
-                              <span>{resp}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
+                    {sectionIcons[secao.id]}
                   </div>
-                ))}
+                  <div className="cargos-category-title-group">
+                    <h2 id={`titulo-${secao.id}`} className="cargos-category-title">
+                      {secao.titulo}
+                    </h2>
+                  </div>
+                </div>
+                {/* Uma única frase explicativa */}
+                <p className="cargos-category-desc">{secao.descricao}</p>
               </div>
-            </div>
+
+              {/* Grade de Cards de Cargos */}
+              <div className="cargos-grid">
+                {cargos.map((cargo: CargoItem) => {
+                  const descricaoCard = getCargoDescricaoParaSecao(cargo, secao.id);
+                  const isEkeji =
+                    cargo.vinculos?.includes('Ẹkéjì') || cargo.vinculos?.includes('Ekéjì');
+
+                  return (
+                    <article
+                      key={`${secao.id}-${cargo.id}`}
+                      className={`cargo-card ${isEspiritual ? 'cargo-card-espiritual' : ''}`}
+                    >
+                      <div>
+                        {/* Linha de Marcadores e Badges Discretos */}
+                        <div className="cargo-badges-row">
+                          {/* Vínculo entre grupos (ex: Bálẹ̀ ou Ààrẹ dentro de Ogans) */}
+                          {secao.id === 'ogans' && (
+                            <>
+                              {cargo.grupoPrincipal === 'bale' && (
+                                <span className="badge badge-vinculo">Sacerdócio Bálẹ̀</span>
+                              )}
+                              {cargo.grupoPrincipal === 'aare' && (
+                                <span className="badge badge-vinculo">Auxiliar Ààrẹ</span>
+                              )}
+                            </>
+                          )}
+
+                          {/* Marcador Ogan dentro de Bálẹ̀ e Ààrẹ */}
+                          {secao.id !== 'ogans' && cargo.vinculos?.includes('Ogan') && (
+                            <span className="badge badge-vinculo">Ogan</span>
+                          )}
+
+                          {/* Marcador Ẹkéjì */}
+                          {isEkeji && <span className="badge badge-vinculo">Ẹkéjì</span>}
+
+                          {/* Marcador de Posição Espiritual */}
+                          {isEspiritual && (
+                            <span
+                              className="badge"
+                              style={{
+                                backgroundColor: 'var(--color-accent-gold-light)',
+                                color: 'var(--color-bg-dark)',
+                                fontWeight: 600
+                              }}
+                            >
+                              Vivência Espiritual
+                            </span>
+                          )}
+
+                          {/* Marcador de Gênero */}
+                          {cargo.genero && (
+                            <span className="badge badge-gender">{cargo.genero}</span>
+                          )}
+                        </div>
+
+                        {/* Nome do Cargo */}
+                        <h3 className="cargo-card-title">{cargo.nome}</h3>
+
+                        {/* Descrição em uma única frase */}
+                        <p className="cargo-card-desc">{descricaoCard}</p>
+                      </div>
+                    </article>
+                  );
+                })}
+              </div>
+            </section>
           );
         })}
       </div>
