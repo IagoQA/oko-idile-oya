@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   BookOpen,
-  GitBranch,
+  Keyboard,
   Library,
   Music,
   Award,
@@ -28,12 +28,6 @@ export const Home: React.FC<HomeProps> = ({
       title: 'História da Casa',
       desc: 'Conheça a trajetória, a fundação e a caminhada entre o Ilé de origem e nossa matriz.',
       icon: <BookOpen size={24} />
-    },
-    {
-      id: 'linhagem' as TabType,
-      title: 'Rama Familiar',
-      desc: 'Compreenda a nossa linhagem sagrada e a origem junto ao Ilé Àṣẹ Ìmọ́lẹ̀ Òṣàlá.',
-      icon: <GitBranch size={24} />
     },
     {
       id: 'sire' as TabType,
@@ -64,6 +58,12 @@ export const Home: React.FC<HomeProps> = ({
       title: 'Galeria de Memórias',
       desc: 'Registros fotográficos de eventos, obrigações rituais e momentos marcantes da casa.',
       icon: <ImageIcon size={24} />
+    },
+    {
+      id: 'tecladoYoruba' as TabType,
+      title: 'Teclado Yoruba',
+      desc: 'Ferramenta para digitar caracteres especiais do alfabeto yorùbá e acentuação correta.',
+      icon: <Keyboard size={24} />
     }
   ];
 
@@ -91,16 +91,6 @@ export const Home: React.FC<HomeProps> = ({
           <h1 className="home-hero-title">Oko Ìdílé Ọya</h1>
           <h2 className="home-hero-subtitle">Omoloko de Raiz Nagô</h2>
 
-          <p className="home-hero-quote">
-            "Um espaço dedicado à memória, ao conhecimento, à tradição e aos ensinamentos do Oko Ìdílé Ọya."
-          </p>
-
-          <div className="home-lineage-badge">
-            <span style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
-              Ilé de Origem & Referência
-            </span>
-            <strong>Ilé Àṣẹ Ìmọ́lẹ̀ Òṣàlá — Omoloko de Raiz Makumba</strong>
-          </div>
         </div>
       </section>
 
@@ -108,10 +98,9 @@ export const Home: React.FC<HomeProps> = ({
       <section className="section-padding">
         <div className="container">
           <div className="section-header">
-            <span className="section-tag">Central de Conhecimento</span>
             <h2 className="section-title">Explore o Acervo da Nossa Casa</h2>
             <p className="section-subtitle">
-              Navegue pelas seções abaixo para acessar a história, cantigas, documentos e a memória sagrada da nossa família de santo.
+              Navegue pelas seções abaixo para acessar a história, cantigas, documentos e a memória sagrada da nossa família de àṣẹ.
             </p>
           </div>
 

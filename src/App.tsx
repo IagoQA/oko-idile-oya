@@ -3,12 +3,12 @@ import { Header, TabType } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
 import { Home } from './pages/Home/Home';
 import { HistoriaPage } from './pages/Historia/Historia';
-import { LinhagemPage } from './pages/Linhagem/Linhagem';
 import { ApostilasPage } from './pages/Apostilas/Apostilas';
 import { SirePage } from './pages/Sire/Sire';
 import { CargosPage } from './pages/Cargos/Cargos';
 import { TextosPage } from './pages/Textos/Textos';
 import { GaleriaPage } from './pages/Galeria/Galeria';
+import { TecladoYorubaPage } from './pages/TecladoYoruba/TecladoYoruba';
 import './styles/global.css';
 
 export function App() {
@@ -20,8 +20,6 @@ export function App() {
         return <Home onSelectTab={setActiveTab} />;
       case 'historia':
         return <HistoriaPage />;
-      case 'linhagem':
-        return <LinhagemPage />;
       case 'apostilas':
         return <ApostilasPage />;
       case 'sire':
@@ -32,6 +30,8 @@ export function App() {
         return <TextosPage />;
       case 'galeria':
         return <GaleriaPage />;
+      case 'tecladoYoruba':
+        return <TecladoYorubaPage />;
       default:
         return <Home onSelectTab={setActiveTab} />;
     }

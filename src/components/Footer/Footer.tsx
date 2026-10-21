@@ -23,7 +23,7 @@ export const Footer: React.FC<FooterProps> = ({
                 alt="Logo Oko Ìdílé Ọya" 
                 className="footer-logo-img" 
                 onError={(e) => {
-                  (e.target as HTMLImageElement).src = '/logo-oko-idile-oya.svg';
+                  (e.target as HTMLImageElement).src = '/logo-oko-idile-oya-branca.svg';
                 }}
               />
               <div>
@@ -31,9 +31,6 @@ export const Footer: React.FC<FooterProps> = ({
                 <p className="footer-subtitle">Omoloko de Raiz Nagô</p>
               </div>
             </div>
-            <p className="footer-tagline">
-              Um espaço dedicado à memória, ao conhecimento, à tradição e aos ensinamentos do Oko Ìdílé Ọya.
-            </p>
           </div>
 
           {/* Quick Links */}
@@ -42,24 +39,22 @@ export const Footer: React.FC<FooterProps> = ({
             <ul className="footer-links-list">
               <li><button onClick={() => onSelectTab('inicio')} className="footer-link-btn">Início</button></li>
               <li><button onClick={() => onSelectTab('historia')} className="footer-link-btn">História da Casa</button></li>
-              <li><button onClick={() => onSelectTab('linhagem')} className="footer-link-btn">Rama Familiar</button></li>
               <li><button onClick={() => onSelectTab('apostilas')} className="footer-link-btn">Apostilas & Estudos</button></li>
               <li><button onClick={() => onSelectTab('sire')} className="footer-link-btn">Ṣiré Oko Ìdílé Ọya</button></li>
               <li><button onClick={() => onSelectTab('cargos')} className="footer-link-btn">Cargos da Casa</button></li>
               <li><button onClick={() => onSelectTab('textos')} className="footer-link-btn">Textos & Ensinamentos</button></li>
               <li><button onClick={() => onSelectTab('galeria')} className="footer-link-btn">Galeria de Fotos</button></li>
+              <li><button onClick={() => onSelectTab('tecladoYoruba')} className="footer-link-btn">Teclado Yorùbá</button></li>
             </ul>
           </div>
 
-          {/* Ancestral Reference */}
+          {/* Social Media */}
           <div>
-            <h4 className="footer-col-title">Linhagem & Origem</h4>
-            <div className="footer-reference-box">
-              <p className="footer-reference-title">Ilé de Origem & Referência</p>
-              <h5 className="footer-reference-name">Ilé Àṣẹ Ìmọ́lẹ̀ Òṣàlá</h5>
-              <p style={{ fontSize: '0.8rem', color: 'var(--color-text-light)', marginTop: '0.25rem' }}>
-                Omoloko de Raiz Makumba
-              </p>
+            <h4 className="footer-col-title">Redes Sociais</h4>
+            <div className="footer-links-list">
+              <li><a href="https://www.instagram.com/okoidileoya" target="_blank" rel="noopener noreferrer" className="footer-link-btn">@okoidileoya</a></li>
+              <li><a href="https://www.instagram.com/baba_obanile" target="_blank" rel="noopener noreferrer" className="footer-link-btn">@baba_obanile</a></li>
+              <li><a href="https://www.youtube.com/@BabaObanile" target="_blank" rel="noopener noreferrer" className="footer-link-btn">Bàbá Ọbanilẹ̀ no YouTube</a></li>
             </div>
           </div>
         </div>

@@ -6,13 +6,14 @@ import {
   CargoGroupId,
   CargoItem
 } from '../../data/cargos';
-import { Flame, Shield, Compass, Music, Award, Sparkles } from 'lucide-react';
+import { Crown, Flame, Shield, Compass, Music, Award, Sparkles } from 'lucide-react';
 import './Cargos.css';
 
 export const CargosPage: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>('Todos');
 
   const sectionIcons: Record<CargoGroupId, React.ReactNode> = {
+    'chefia-sucessao': <Crown size={22} />,
     bale: <Flame size={22} />,
     aare: <Shield size={22} />,
     alaajo: <Compass size={22} />,
@@ -34,10 +35,10 @@ export const CargosPage: React.FC = () => {
           <span className="section-tag">Hierarquia & Funções</span>
           <h1 className="section-title">Cargos do Oko Ìdílé Ọya</h1>
           <p className="section-subtitle">
-            Estrutura canônica dos cargos e posições da nossa tradição organizada nas
-            classes funcionais: Bálẹ̀ (sacerdócios dos cultos), Ààrẹ (auxiliares dos
-            sacerdócios), Aláájò (funções operacionais), Ogans (funções rituais
-            especializadas), Ẹkéjì (apoio ritual) e Posições Espirituais.
+            Estrutura canônica dos cargos e posições da nossa tradição: Chefia e
+            Sucessão da matriz e do terreiro, Bálẹ̀ (sacerdócios dos cultos), Ààrẹ
+            (auxiliares dos sacerdócios), Aláájò (funções operacionais), Ogans (funções
+            rituais especializadas), Ẹkéjì (apoio ritual) e Posições Espirituais.
           </p>
         </div>
 
@@ -69,7 +70,7 @@ export const CargosPage: React.FC = () => {
           activeCategory === 'ekeji' ||
           activeCategory === 'aare' ||
           activeCategory === 'alaajo')}
-
+          
         {/* Listagem das Seções */}
         {visibleSections.map((secao) => {
           const cargos = getCargosPorSecao(secao.id);
@@ -110,15 +111,39 @@ export const CargosPage: React.FC = () => {
                   const descricaoCard = getCargoDescricaoParaSecao(cargo, secao.id);
                   const isEkeji =
                     cargo.vinculos?.includes('Ẹkéjì') || cargo.vinculos?.includes('Ekéjì');
+                  const isMatriz = cargo.escopo === 'Matriz';
+                  const isTerreiro = cargo.escopo === 'Terreiro';
+
+                  const cardClassNames = [
+                    'cargo-card',
+                    isMatriz ? 'cargo-card-matriz' : '',
+                    isTerreiro ? 'cargo-card-terreiro' : '',
+                    isEspiritual ? 'cargo-card-espiritual' : ''
+                  ]
+                    .filter(Boolean)
+                    .join(' ');
 
                   return (
-                    <article
-                      key={`${secao.id}-${cargo.id}`}
-                      className={`cargo-card ${isEspiritual ? 'cargo-card-espiritual' : ''}`}
-                    >
+                    <article key={`${secao.id}-${cargo.id}`} className={cardClassNames}>
                       <div>
                         {/* Linha de Marcadores e Badges Discretos */}
                         <div className="cargo-badges-row">
+                          {/* Escopo de Autoridade */}
+                          {isMatriz && (
+                            <span className="badge badge-matriz">Exclusivo da Matriz</span>
+                          )}
+                          {isTerreiro && (
+                            <span className="badge badge-terreiro">Terreiro (Oko)</span>
+                          )}
+
+                          {/* Corte & Sucessão */}
+                          {cargo.corte && (
+                            <span className="badge badge-corte">Corte</span>
+                          )}
+                          {cargo.sucessao && (
+                            <span className="badge badge-sucessao">Linha de Sucessão</span>
+                          )}
+
                           {/* Vínculo entre grupos (ex: Bálẹ̀ ou Ààrẹ dentro de Ogans) */}
                           {secao.id === 'ogans' && (
                             <>

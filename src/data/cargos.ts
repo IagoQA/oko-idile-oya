@@ -1,10 +1,17 @@
-export type CargoGroupId = 'bale' | 'aare' | 'alaajo' | 'ogans' | 'ekeji' | 'posicoes-espirituais';
+export type CargoGroupId =
+  | 'chefia-sucessao'
+  | 'bale'
+  | 'aare'
+  | 'alaajo'
+  | 'ogans'
+  | 'ekeji'
+  | 'posicoes-espirituais';
 
 export interface CargoSecao {
   id: CargoGroupId;
   titulo: string;
   descricao: string;
-  iconKey: 'Flame' | 'Shield' | 'Compass' | 'Music' | 'Award' | 'Sparkles';
+  iconKey: 'Crown' | 'Flame' | 'Shield' | 'Compass' | 'Music' | 'Award' | 'Sparkles';
   cargoIds: string[];
 }
 
@@ -33,6 +40,14 @@ export interface CargoItem {
 
 /* Configuração canônica das seções da página */
 export const secoesCargos: CargoSecao[] = [
+  {
+    id: 'chefia-sucessao',
+    titulo: 'Chefia e Sucessão',
+    descricao:
+      'Reúne as autoridades sacerdotais principais da matriz e do terreiro, bem como os cargos da corte e da linha de sucessão.',
+    iconKey: 'Crown',
+    cargoIds: ['c-1', 'c-2', 'c-3', 'c-4', 'c-5', 'c-6']
+  },
   {
     id: 'bale',
     titulo: 'Bálẹ̀',
@@ -137,7 +152,71 @@ export const secoesCargos: CargoSecao[] = [
 
 /* Cadastro canônico unificado dos cargos */
 export const cargosData: CargoItem[] = [
-  /* ================= 1. BÁLẸ̀ ================= */
+  /* ================= 1. CHEFIA E SUCESSÃO ================= */
+  {
+    id: 'c-1',
+    nome: 'Olórí Oko',
+    grupoPrincipal: 'chefia-sucessao',
+    escopo: 'Matriz',
+    genero: 'Masculino',
+    vinculos: ['Chefia da Matriz', 'Matriz'],
+    descricao: 'Sacerdote principal da matriz.',
+    categoria: 'Chefia e Sucessão'
+  },
+  {
+    id: 'c-2',
+    nome: 'Ìyálóde',
+    grupoPrincipal: 'chefia-sucessao',
+    escopo: 'Matriz',
+    genero: 'Feminino',
+    vinculos: ['Chefia da Matriz', 'Matriz'],
+    descricao: 'Sacerdotisa principal da matriz.',
+    categoria: 'Chefia e Sucessão'
+  },
+  {
+    id: 'c-3',
+    nome: 'Bàbálòrìṣà',
+    grupoPrincipal: 'chefia-sucessao',
+    escopo: 'Terreiro',
+    genero: 'Masculino',
+    vinculos: ['Chefia do Terreiro', 'Terreiro'],
+    descricao: 'Sacerdote principal do Oko, o terreiro.',
+    categoria: 'Chefia e Sucessão'
+  },
+  {
+    id: 'c-4',
+    nome: 'Ìyálòrìṣà',
+    grupoPrincipal: 'chefia-sucessao',
+    escopo: 'Terreiro',
+    genero: 'Feminino',
+    vinculos: ['Chefia do Terreiro', 'Terreiro'],
+    descricao: 'Sacerdotisa principal do Oko, o terreiro.',
+    categoria: 'Chefia e Sucessão'
+  },
+  {
+    id: 'c-5',
+    nome: 'Bàbá Kékeré',
+    grupoPrincipal: 'chefia-sucessao',
+    corte: true,
+    sucessao: true,
+    genero: 'Masculino',
+    vinculos: ['Corte', 'Sucessão'],
+    descricao: 'Cargo imediatamente abaixo da chefia sacerdotal, com possibilidade de suceder o sacerdote conforme as normas da casa.',
+    categoria: 'Chefia e Sucessão'
+  },
+  {
+    id: 'c-6',
+    nome: 'Ìyá Kékeré',
+    grupoPrincipal: 'chefia-sucessao',
+    corte: true,
+    sucessao: true,
+    genero: 'Feminino',
+    vinculos: ['Corte', 'Sucessão'],
+    descricao: 'Cargo imediatamente abaixo da chefia sacerdotal, com possibilidade de suceder a sacerdotisa conforme as normas da casa.',
+    categoria: 'Chefia e Sucessão'
+  },
+
+  /* ================= 2. BÁLẸ̀ ================= */
   {
     id: 'c-10',
     nome: 'Abéṣùmulẹ̀ - Ìyá Èṣù',
@@ -313,7 +392,7 @@ export const cargosData: CargoItem[] = [
     categoria: 'Bálẹ̀'
   },
 
-  /* ================= 2. ÀÀRẸ ================= */
+  /* ================= 3. ÀÀRẸ ================= */
   {
     id: 'c-29',
     nome: 'Ìyá Ìránṣẹ́',
@@ -428,7 +507,7 @@ export const cargosData: CargoItem[] = [
     categoria: 'Ààrẹ'
   },
 
-  /* ================= 3. ALÁÁJÒ ================= */
+  /* ================= 4. ALÁÁJÒ ================= */
   {
     id: 'c-39',
     nome: 'Ìyágbàsè',
@@ -485,7 +564,7 @@ export const cargosData: CargoItem[] = [
     categoria: 'ẸKÉJÌ'
   },
 
-  /* ================= 4. OGANS ================= */
+  /* ================= 5. OGANS ================= */
   {
     id: 'og-4',
     nome: 'Alágbè',
@@ -505,7 +584,7 @@ export const cargosData: CargoItem[] = [
     categoria: 'OGANS'
   },
 
-  /* ================= 5. POSIÇÕES ESPIRITUAIS ================= */
+  /* ================= 6. POSIÇÕES ESPIRITUAIS ================= */
   {
     id: 'pe-1',
     nome: 'Ẹ̀gbọ́n',

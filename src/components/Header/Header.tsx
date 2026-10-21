@@ -2,26 +2,26 @@ import React, { useState } from 'react';
 import { 
   Home, 
   BookOpen, 
-  GitBranch, 
   Library, 
   Music, 
   Award, 
   FileText, 
   Image as ImageIcon,
   Menu,
-  X
+  X,
+  Keyboard
 } from 'lucide-react';
 import './Header.css';
 
 export type TabType = 
   | 'inicio'
   | 'historia'
-  | 'linhagem'
   | 'apostilas'
   | 'sire'
   | 'cargos'
   | 'textos'
-  | 'galeria';
+  | 'galeria'
+  | 'tecladoYoruba';
 
 interface HeaderProps {
   activeTab: TabType;
@@ -39,12 +39,12 @@ export const Header: React.FC<HeaderProps> = ({
   const navItems: { id: TabType; label: string; icon: React.ReactNode }[] = [
     { id: 'inicio', label: 'Início', icon: <Home size={16} /> },
     { id: 'historia', label: 'História', icon: <BookOpen size={16} /> },
-    { id: 'linhagem', label: 'Rama Familiar', icon: <GitBranch size={16} /> },
     { id: 'apostilas', label: 'Apostilas', icon: <Library size={16} /> },
     { id: 'sire', label: 'Ṣiré', icon: <Music size={16} /> },
     { id: 'cargos', label: 'Cargos', icon: <Award size={16} /> },
     { id: 'textos', label: 'Textos', icon: <FileText size={16} /> },
     { id: 'galeria', label: 'Galeria', icon: <ImageIcon size={16} /> },
+    { id: 'tecladoYoruba', label: 'Teclado Yoruba', icon: <Keyboard size={16} /> }
   ];
 
   const handleNavClick = (tabId: TabType) => {

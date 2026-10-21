@@ -26,22 +26,20 @@
 }
 
 .footer-logo-img {
-  width: 48px;
-  height: 48px;
-  border-radius: var(--radius-full);
-  border: 1px solid var(--color-accent-gold);
+  width: 100px;
+  height: 100px;
 }
 
 .footer-title {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: var(--color-bg-main);
   letter-spacing: -0.01em;
 }
 
 .footer-subtitle {
   font-family: var(--font-body);
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: var(--color-accent-gold);
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -92,27 +90,6 @@
 }
 
 .footer-link-btn:hover {
-  color: var(--color-bg-main);
-}
-
-.footer-reference-box {
-  background-color: var(--color-bg-dark-card);
-  border-left: 3px solid var(--color-accent-gold);
-  padding: 1rem 1.25rem;
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-}
-
-.footer-reference-title {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--color-text-light);
-  margin-bottom: 0.25rem;
-}
-
-.footer-reference-name {
-  font-family: var(--font-heading);
-  font-size: 1rem;
   color: var(--color-bg-main);
 }
 

@@ -1,12 +1,5 @@
-export interface TimelineItem {
-  year: string;
-  title: string;
-  description: string;
-}
-
 export interface HistoriaData {
   title: string;
-  subtitle: string;
   introduction: string;
   seccaoIlePai: {
     title: string;
@@ -17,18 +10,15 @@ export interface HistoriaData {
     title: string;
     sub: string;
     paragraphs: string[];
-    highlight?: string;
   };
-  timeline: TimelineItem[];
 }
 
 export const historiaData: HistoriaData = {
   title: "História do Oko Ìdílé Ọya",
-  subtitle: "Memória, ancestralidade e a caminhada entre o Ilé Àṣẹ Ìmọ́lẹ̀ Òṣàlá e a Matriz Oko Ìdílé Ọya.",
-  introduction: "O caminho espiritual que sustenta o Oko Ìdílé Ọya é pautado pelo respeito à ancestralidade, pela disciplina dos ritos e pela honra aos ensinamentos transmitidos por nossos antepassados.",
+  introduction: "A história do Oko Ìdílé Ọya representa um testemunho vivo de resistência e vitória ancestral. Situado em Luiz Alves, Santa Catarina, é reconhecido como o primeiro Templo de Matriz Africana do município, tornando-se parte fundamental da preservação da ancestralidade, da cultura e da tradição de nossa comunidade.",
   seccaoIlePai: {
     title: "A História do Ilé Àṣẹ Ìmọ́lẹ̀ Òṣàlá",
-    sub: "Omoloko de Raiz Makumba — Casa de Origem & Referência",
+    sub: "Omoloko de Raiz Makumba",
     paragraphs: [
       "[A história do Ilé Àṣẹ Ìmọ́lẹ̀ Òṣàlá será inserida aqui pelo responsável da casa.]",
       "[Este espaço registrará a trajetória da casa do pai, os fundamentos da raiz Makumba e os primeiros passos que abriram caminho para nossa família de santo.]"
@@ -38,26 +28,9 @@ export const historiaData: HistoriaData = {
     title: "A História do Oko Ìdílé Ọya",
     sub: "Omoloko de Raiz Nagô",
     paragraphs: [
-      "[A história do Oko Ìdílé Ọya será inserida aqui pelo responsável da casa.]",
-      "[Este espaço receberá o histórico de fundação da nossa casa, a consagração dos assentamentos, os ritos e a consolidação da Omoloko de Raiz Nagô.]"
+      "Fundado em 21 de dezembro de 2024, o Oko Ìdílé Ọya nasceu com o propósito de entrar para a história não apenas como uma casa de culto, mas como um espaço de preservação, continuidade e fortalecimento da ancestralidade afro-brasileira.",
+      "Sua criação representa o resultado de uma caminhada de fé, resistência e compromisso com os ensinamentos que atravessaram gerações. Em Luiz Alves, Santa Catarina, o Oko Ìdílé Ọya ergue-se como um marco para a presença da tradição de Matriz Africana, buscando preservar seus fundamentos, seus ritos, seus cânticos, seus saberes e, sobretudo, o respeito aos nossos ancestrais. Nossa história está apenas começando. E, desde o primeiro dia, carregamos a responsabilidade de construir um legado que permaneça para além de nosso tempo — honrando aqueles que vieram antes de nós, fortalecendo os que caminham conosco hoje e preparando o caminho para aqueles que ainda virão.",
+      "O Oko Ìdílé Ọya nasce, assim, com os olhos voltados para o futuro, mas com os pés firmes no presente. Uma casa construída para cultuar, ensinar, preservar e, acima de tudo, manter viva uma história que jamais poderá ser apagada.",
     ],
-    highlight: "Um espaço dedicado à memória, ao conhecimento, à tradição e aos ensinamentos do Oko Ìdílé Ọya."
   },
-  timeline: [
-    {
-      year: "[Ano]",
-      title: "Origens no Ilé Àṣẹ Ìmọ́lẹ̀ Òṣàlá",
-      description: "[Descrição do marco inicial na casa de origem do pai — Omoloko de Raiz Makumba.]"
-    },
-    {
-      year: "[Ano]",
-      title: "Fundação do Oko Ìdílé Ọya",
-      description: "[Descrição da fundação e assentamento da Omoloko de Raiz Nagô.]"
-    },
-    {
-      year: "[Ano]",
-      title: "Consolidação da Família de Santo",
-      description: "[Marcos importantes de iniciações, festividades e presenças rituais.]"
-    }
-  ]
 };
